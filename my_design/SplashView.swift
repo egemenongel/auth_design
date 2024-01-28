@@ -7,11 +7,32 @@
 
 import SwiftUI
 
+
 struct SplashView: View {
+    @State private var path = NavigationPath()
+    @State var timeRemaining = 3
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
-        ZStack(alignment: .bottom){
-            Color.theme.background.ignoresSafeArea()
-            bodyView
+        NavigationStack(path:$path) {
+            ZStack(alignment: .bottom){
+                Color.theme.background.ignoresSafeArea()
+                bodyView
+            }
+            .navigationDestination(for: String.self) { view in
+               if (view == "OnboardView") {
+                   OnboardView()
+               }
+           }
+            .onReceive(timer) { _ in
+                if (timeRemaining > 0) {
+                    timeRemaining -= 1
+                }
+                if(timeRemaining==0){
+                    path.append("OnboardView")
+                    timer.upstream.connect().cancel()
+                }
+        }
         }
     }
 }
