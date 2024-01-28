@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct OnboardView: View {
     var body: some View {
         VStack(spacing:20){
             Image("icon")

@@ -16,7 +16,7 @@
 		C9957C4F2B62A7D80037DF0B /* my_designUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C4E2B62A7D80037DF0B /* my_designUITestsLaunchTests.swift */; };
 		C9957C5C2B62AF300037DF0B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C5B2B62AF300037DF0B /* Color.swift */; };
 		C9957C5E2B63002A0037DF0B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C5D2B63002A0037DF0B /* SplashView.swift */; };
-		C9957C602B6301290037DF0B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C5F2B6301290037DF0B /* LoginView.swift */; };
+		C9957C602B6301290037DF0B /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C5F2B6301290037DF0B /* OnboardView.swift */; };
 		C9957C622B668A8B0037DF0B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9957C612B668A8B0037DF0B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		C9957C4E2B62A7D80037DF0B /* my_designUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_designUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9957C5B2B62AF300037DF0B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C9957C5D2B63002A0037DF0B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		C9957C5F2B6301290037DF0B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C9957C5F2B6301290037DF0B /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		C9957C612B668A8B0037DF0B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,14 +102,13 @@
 		C9957C302B62A7D60037DF0B /* my_design */ = {
 			isa = PBXGroup;
 			children = (
+				C9957C632B6694C50037DF0B /* Core */,
 				C9957C312B62A7D60037DF0B /* my_designApp.swift */,
 				C9957C332B62A7D60037DF0B /* ContentView.swift */,
 				C9957C352B62A7D80037DF0B /* Assets.xcassets */,
 				C9957C372B62A7D80037DF0B /* Preview Content */,
-				C9957C5B2B62AF300037DF0B /* Color.swift */,
 				C9957C5D2B63002A0037DF0B /* SplashView.swift */,
-				C9957C5F2B6301290037DF0B /* LoginView.swift */,
-				C9957C612B668A8B0037DF0B /* CustomButton.swift */,
+				C9957C5F2B6301290037DF0B /* OnboardView.swift */,
 			);
 			path = my_design;
 			sourceTree = "<group>";
@@ -137,6 +136,31 @@
 				C9957C4E2B62A7D80037DF0B /* my_designUITestsLaunchTests.swift */,
 			);
 			path = my_designUITests;
+			sourceTree = "<group>";
+		};
+		C9957C632B6694C50037DF0B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C9957C652B6695040037DF0B /* Extensions */,
+				C9957C642B6694CC0037DF0B /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C9957C642B6694CC0037DF0B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C9957C612B668A8B0037DF0B /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C9957C652B6695040037DF0B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9957C5B2B62AF300037DF0B /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +297,7 @@
 				C9957C5E2B63002A0037DF0B /* SplashView.swift in Sources */,
 				C9957C622B668A8B0037DF0B /* CustomButton.swift in Sources */,
 				C9957C322B62A7D60037DF0B /* my_designApp.swift in Sources */,
-				C9957C602B6301290037DF0B /* LoginView.swift in Sources */,
+				C9957C602B6301290037DF0B /* OnboardView.swift in Sources */,
 				C9957C5C2B62AF300037DF0B /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
