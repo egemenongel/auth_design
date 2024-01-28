@@ -8,11 +8,43 @@
 import SwiftUI
 
 struct CustomButton: View {
+    var text: String
+    var icon: Image?
+    var clicked: (() -> Void)
+    var foregroundColor: Color?
+    var backgroundColor: Color?
+   
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let foregroundCol = foregroundColor == nil
+        ?.white
+        :foregroundColor!
+        
+        Button(action: clicked) {
+            HStack {
+                icon
+                Text(text)
+            }
+            .frame(width: 250)
+            .foregroundColor(foregroundCol)
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                  .stroke(foregroundCol, lineWidth: 2)
+                  .fill(
+                    backgroundColor == nil 
+                    ? Color.theme.background
+                    :backgroundColor!)
+            )
+        }
+       
     }
 }
 
 #Preview {
-    CustomButton()
+    CustomButton(
+        text:"Button",
+//        icon:Image(systemName: "globe"),
+        clicked: {}
+    )
 }
