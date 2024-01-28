@@ -1,1 +1,3 @@
-Auth design with SwiftUI
+# Auth Design
+
+Auth design developed with SwiftUI
